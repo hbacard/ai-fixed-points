@@ -1,0 +1,29 @@
+name: Feature request
+description: Suggest an idea for ai-fixed-points
+title: "[feature]: "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for suggesting an improvement! Please describe the problem you are trying to solve.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What problem or limitation are you trying to solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: How might this feature work? Include a rough sketch or API idea if you have one.
+    validations:
+      required: false
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Any workarounds or alternatives you have tried?
+    validations:
+      required: false

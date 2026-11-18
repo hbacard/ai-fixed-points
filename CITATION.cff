@@ -1,0 +1,26 @@
+# Citation metadata for ai-fixed-points.
+# Format: https://citation-file-format.github.io/
+# Validate with: cffconvert --validate  (https://github.com/citation-file-format/cffconvert)
+
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "ai-fixed-points"
+abstract: >-
+  An LLM-driven code improvement agent that repeatedly rewrites a piece of code
+  toward a fixed point, using OpenAI-compatible models, a pluggable judge, and
+  Langfuse tracing.
+keywords:
+  - code improvement
+  - LLM agent
+  - fixed point
+  - pydantic-ai
+  - langfuse
+type: software
+authors:
+  - family-names: Bacard
+    given-names: Hugo
+    email: hugo.bacard@ijclab.in2p3.fr
+    orcid: https://orcid.org/0000-0001-9216-494X
+version: "0.1.0"
+date-released: "2026-11-18"
+license: Apache-2.0
