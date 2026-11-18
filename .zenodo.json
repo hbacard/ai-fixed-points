@@ -5,7 +5,8 @@
     {
       "affiliation": "IJCLab",
       "name": "Hugo Bacard",
-      "email": "hugo.bacard@ijclab.in2p3.fr"
+      "email": "hugo.bacard@ijclab.in2p3.fr",
+      "orcid": "0000-0001-9216-494X"
     }
   ],
   "keywords": ["code improvement", "LLM agent", "fixed point", "pydantic-ai", "langfuse"],

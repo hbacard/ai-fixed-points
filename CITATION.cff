@@ -20,8 +20,7 @@ authors:
   - family-names: Bacard
     given-names: Hugo
     email: hugo.bacard@ijclab.in2p3.fr
-    # TODO: add the author's ORCID iD, e.g.
-    # orcid: https://orcid.org/0000-0000-0000-0000
+    orcid: https://orcid.org/0000-0001-9216-494X
 version: "0.1.0"
 date-released: "2026-11-18"
 license: Apache-2.0
