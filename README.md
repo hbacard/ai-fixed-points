@@ -77,6 +77,12 @@ The quickest way to see it in action:
 uv run python -m ai_fixed_points.improve_loop
 ```
 
+or via the installed CLI:
+
+```bash
+ai-fixed-points path/to/source.py --max-rounds 3
+```
+
 or, from within the package:
 
 ```python
@@ -87,6 +93,20 @@ code = open("my_file.py").read()
 result = asyncio.run(multi_improve(user_input=code, max_round=3))
 print(result)
 ```
+
+### Running with Docker
+
+A multi-stage `Dockerfile` is provided for reproducible deployment:
+
+```bash
+# Build and run the CLI inside a container
+docker build -t ai-fixed-points .
+docker run --rm ai-fixed-points
+docker run --rm -v "$PWD/src:/work" ai-fixed-points /work/ai_fixed_points/base.py
+```
+
+Secrets are passed through the environment (`-e OPENAI_API_KEY=...`); local
+`config.yaml`/`.env` are **not** baked into the image.
 
 ### Writing a custom agent
 
@@ -112,13 +132,24 @@ class Reviewer(BaseAgent):
 │   ├── base.py            # BaseAgent: model wiring, prompt loading, tracing
 │   ├── config.py          # config loading (.env + config.yaml profiles)
 │   ├── improver.py        # CodeImprover: concrete code-improving agent
-│   └── improve_loop.py    # multi_round iterative improvement loop
+│   ├── improve_loop.py    # multi_round iterative improvement loop
+│   └── cli.py             # ai-fixed-points command line entry point
 ├── prompts/               # system prompts for agents
 ├── tests/                 # pytest suite
-├── docs/                  # documentation
+├── docs/                  # documentation (MkDocs site; see mkdocs.yml)
+├── Dockerfile             # reproducible container image
 ├── config.yaml.example    # committed config template
 └── pyproject.toml
 ```
+
+## Documentation & project documents
+
+- `docs/api.md` — full API reference (also served as an MkDocs site).
+- [REPRODUCIBILITY.md](REPRODUCIBILITY.md) — how to reproduce results.
+- [DMP.md](DMP.md) — data management plan.
+- [SUSTAINABILITY.md](SUSTAINABILITY.md) — software sustainability plan.
+- [SECURITY.md](SECURITY.md) — how to report vulnerabilities.
+- [CONTRIBUTING.md](CONTRIBUTING.md) — how to contribute.
 
 ## Testing
 
