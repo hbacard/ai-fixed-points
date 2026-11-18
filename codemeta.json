@@ -4,6 +4,7 @@
   "identifier": "ai-fixed-points",
   "name": "ai-fixed-points",
   "version": "0.1.0",
+  "softwareVersion": "0.1.0",
   "description": "An LLM-driven code improvement agent that repeatedly rewrites a piece of code toward a fixed point, using OpenAI-compatible models, a pluggable judge, and Langfuse tracing.",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "codeRepository": "https://github.com/hbacard/ai-fixed-points",

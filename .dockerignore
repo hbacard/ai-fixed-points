@@ -1,0 +1,40 @@
+# Version control
+.git
+.gitignore
+
+# Environments
+.venv/
+venv/
+env/
+.pdm-python
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Local / machine-specific files
+config.yaml
+.env
+.env.*
+!/.env.example
+
+# Scan & milestone reports
+*-report.md
+milestone.md
+progression.md
+
+# OS clutter
+.DS_Store
+Thumbs.db

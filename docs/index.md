@@ -2,12 +2,16 @@
 
 Welcome to the ai-fixed-points documentation.
 
-- [README](../README.md) — overview, installation, configuration, and usage.
-- [CONTRIBUTING](../CONTRIBUTING.md) — how to contribute.
-- [CODE_OF_CONDUCT](../CODE_OF_CONDUCT.md) — community standards.
-- [SECURITY](../SECURITY.md) — how to report vulnerabilities.
-- [CHANGELOG](../CHANGELOG.md) — release history.
-- [LICENSE](../LICENSE) — the Apache-2.0 license.
+- [README](https://github.com/hbacard/ai-fixed-points/blob/main/README.md) — overview, installation, configuration, and usage.
+- [API Reference](api.md) — the full `ai_fixed_points` API and CLI.
+- [DMP](https://github.com/hbacard/ai-fixed-points/blob/main/DMP.md) — data management plan.
+- [REPRODUCIBILITY](https://github.com/hbacard/ai-fixed-points/blob/main/REPRODUCIBILITY.md) — how to reproduce results.
+- [SUSTAINABILITY](https://github.com/hbacard/ai-fixed-points/blob/main/SUSTAINABILITY.md) — software sustainability plan.
+- [CONTRIBUTING](https://github.com/hbacard/ai-fixed-points/blob/main/CONTRIBUTING.md) — how to contribute.
+- [CODE_OF_CONDUCT](https://github.com/hbacard/ai-fixed-points/blob/main/CODE_OF_CONDUCT.md) — community standards.
+- [SECURITY](https://github.com/hbacard/ai-fixed-points/blob/main/SECURITY.md) — how to report vulnerabilities.
+- [CHANGELOG](https://github.com/hbacard/ai-fixed-points/blob/main/CHANGELOG.md) — release history.
+- [LICENSE](https://github.com/hbacard/ai-fixed-points/blob/main/LICENSE) — the Apache-2.0 license.
 
 ## About
 
@@ -24,6 +28,7 @@ changes.
 | `src/ai_fixed_points/config.py`   | Configuration loading (`.env` secrets + YAML profiles)  |
 | `src/ai_fixed_points/improver.py` | `CodeImprover`: concrete code-improving agent           |
 | `src/ai_fixed_points/improve_loop.py` | Iterative `multi_improve()` loop                    |
+| `src/ai_fixed_points/cli.py`      | `ai-fixed-points` command line entry point             |
 | `prompts/improve.md`              | System prompt for the improving agent                   |
 
 ## Running tests
