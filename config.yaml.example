@@ -1,0 +1,31 @@
+# Machine-specific configuration template.
+#
+# Copy this file to `config.yaml` (which is gitignored) and fill in the values
+# that apply to your environment. When `config.yaml` is absent — e.g. in a fresh
+# checkout or CI — the tool falls back to this template, so it stays importable
+# without any local setup.
+#
+# Profile resolution order:
+#   1. explicit `profile` argument
+#   2. `PSEUDO_SECTIONS_PROFILE` environment variable
+#   3. `default_profile` key below
+
+default_profile: openai
+
+profiles:
+  openai:
+    base_url: https://api.openai.com/v1
+    model: gpt-4o-mini
+    # Name of the environment variable (or .env key) holding the API key.
+    api_var_env: OPENAI_API_KEY
+
+  ollama:
+    base_url: http://localhost:11434/v1
+    model: llama3.1
+    api_var_env: OLLAMA_API_KEY
+
+# Judge used by the adversarial improvement loop.
+#   mode: "llm"        LLM-as-a-judge (reuses the active profile by default)
+#   mode: "similarity" difflib string similarity (no extra API call)
+judge:
+  mode: similarity

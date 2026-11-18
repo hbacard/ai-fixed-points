@@ -15,11 +15,11 @@ from pathlib import Path
 import yaml
 from dotenv import load_dotenv
 
-PROJECT_ROOT = Path(__file__).resolve().parent
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 CONFIG_FILE = PROJECT_ROOT / "config.yaml"
 CONFIG_EXAMPLE_FILE = PROJECT_ROOT / "config.yaml.example"
 ENV_FILE = PROJECT_ROOT / ".env"
-PROMPTS_DIR = Path(__file__).resolve().parent / "prompts"
+PROMPTS_DIR = PROJECT_ROOT / "prompts"
 
 _PROFILE_ENV = "PSEUDO_SECTIONS_PROFILE"
 
