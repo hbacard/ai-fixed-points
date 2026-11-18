@@ -43,6 +43,9 @@ htmlcov/
 .nox/
 .coverage.lcov
 
+# Docs build output
+site/
+
 # Editor / IDE
 .vscode/
 .idea/

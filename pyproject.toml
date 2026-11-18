@@ -28,11 +28,16 @@ dependencies = [
     "langfuse>=5.2.0",
 ]
 
+[project.scripts]
+ai-fixed-points = "ai_fixed_points.cli:main"
+
 [project.optional-dependencies]
 dev = [
     "pytest>=8.0.0",
     "pytest-cov>=5.0.0",
     "ruff>=0.6.0",
+    "mkdocs>=1.6.0",
+    "mkdocs-material>=9.5.0",
 ]
 
 [tool.setuptools.packages.find]
