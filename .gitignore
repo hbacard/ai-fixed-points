@@ -1,0 +1,71 @@
+# Byte-compiled / optimized / DLL files
+*.py[codz]
+__pycache__/
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Environments / virtualenvs
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.pdm-python
+.pdm.toml
+
+# Caches
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+.coverage.lcov
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Secrets (never commit)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+_untracked*
+_docs
+config.yaml
+*-report.md
+milestone.md
+progression.md

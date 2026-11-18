@@ -1,0 +1,15 @@
+[project]
+name = "toward-fixedpoint"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "Hugo",email = "hugo.bacard@ijclab.in2p3.fr"},
+]
+dependencies = ["pydantic-ai>=2.70.0", "python-dotenv>=1.2.4", "langfuse>=5.2.0"]
+requires-python = ">=3.12,<3.14"
+readme = "README.md"
+license = "Apache-2"
+
+
+[tool.pdm]
+distribution = false
