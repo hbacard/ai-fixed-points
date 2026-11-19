@@ -8,9 +8,6 @@ progressively cleaner, safer code.
 Built on [Pydantic AI](https://ai.pydantic.dev/) with OpenAI-compatible models,
 fully traceable through [Langfuse](https://langfuse.com/).
 
-> [!NOTE]
-> Software identifier: a DOI badge will appear here once the project is
-> archived on [Zenodo](https://zenodo.org/) after the first release.
 
 ## Features
 
