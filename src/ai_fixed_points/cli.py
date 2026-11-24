@@ -51,7 +51,7 @@ def build_parser() -> argparse.ArgumentParser:
         "--profile",
         type=str,
         default=None,
-        help="Config profile to use (overrides PSEUDO_SECTIONS_PROFILE).",
+        help="Config profile to use (overrides DEFAULT_PROFILE).",
     )
     return parser
 
@@ -73,7 +73,7 @@ def main(argv: list[str] | None = None) -> int:
     if args.profile is not None:
         import os
 
-        os.environ["PSEUDO_SECTIONS_PROFILE"] = args.profile
+        os.environ["DEFAULT_PROFILE"] = args.profile
 
     result = asyncio.run(
         multi_improve(user_input=code, max_round=args.max_rounds, delay=args.delay)

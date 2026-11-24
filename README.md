@@ -1,9 +1,14 @@
 # ai-fixed-points
 
+This repository studies **fixed-point phenomena in AI**, starting with code improvement:
+
 An LLM-driven **code improvement agent** that repeatedly rewrites a piece of
 code toward a *fixed point* — a state the model no longer meaningfully changes.
 Each round feeds the previous output back into the agent, producing
 progressively cleaner, safer code.
+
+The name comes from mathematics: a fixed point is the state `x` a process
+stabilizes into — `f(x) = x`.
 
 Built on [Pydantic AI](https://ai.pydantic.dev/) with OpenAI-compatible models,
 fully traceable through [Langfuse](https://langfuse.com/).
@@ -64,7 +69,7 @@ pip install -e ".[dev]"
    When `config.yaml` is absent, the tool falls back to the committed
    `config.yaml.example` template, so it stays importable in a fresh checkout
    or CI. Profiles are resolved in this order: explicit `profile` argument →
-   `PSEUDO_SECTIONS_PROFILE` env var → `default_profile` key.
+   `DEFAULT_PROFILE` env var → `default_profile` key.
 
 ## Usage
 
