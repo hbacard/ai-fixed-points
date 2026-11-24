@@ -28,7 +28,7 @@ The project is managed with [uv](https://docs.astral.sh/uv/) (or
 
 ```bash
 # Clone the repository
-git clone https://github.com/<your-org>/ai-fixed-points.git
+git clone https://github.com/hbacard/ai-fixed-points.git
 cd ai-fixed-points
 
 # With uv
