@@ -45,7 +45,7 @@ absent.
 **Profile resolution order:**
 
 1. explicit `profile` argument
-2. `PSEUDO_SECTIONS_PROFILE` environment variable
+2. `DEFAULT_PROFILE` environment variable
 3. `default_profile` key in the config file
 
 **Raises:**

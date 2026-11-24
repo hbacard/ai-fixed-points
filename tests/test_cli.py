@@ -74,11 +74,11 @@ def test_main_profile_env_is_set_and_cleaned(tmp_path, monkeypatch):
     calls = {}
 
     async def fake_multi_improve(user_input, max_round, delay):
-        calls["profile"] = os.environ.get("PSEUDO_SECTIONS_PROFILE")
+        calls["profile"] = os.environ.get("DEFAULT_PROFILE")
         return user_input
 
     monkeypatch.setattr("ai_fixed_points.cli.multi_improve", fake_multi_improve)
-    monkeypatch.setenv("PSEUDO_SECTIONS_PROFILE", "sentinel")
+    monkeypatch.setenv("DEFAULT_PROFILE", "sentinel")
 
     # Explicit, non-empty --profile overrides any pre-set env var.
     rc = main([str(source), "--profile", "ollama", "--max-rounds", "0"])
@@ -93,11 +93,11 @@ def test_main_uses_preexisting_profile_env(tmp_path, monkeypatch):
     calls = {}
 
     async def fake_multi_improve(user_input, max_round, delay):
-        calls["profile"] = os.environ.get("PSEUDO_SECTIONS_PROFILE")
+        calls["profile"] = os.environ.get("DEFAULT_PROFILE")
         return user_input
 
     monkeypatch.setattr("ai_fixed_points.cli.multi_improve", fake_multi_improve)
-    monkeypatch.setenv("PSEUDO_SECTIONS_PROFILE", "ollama")
+    monkeypatch.setenv("DEFAULT_PROFILE", "ollama")
 
     # No --profile: the existing env var is left untouched.
     rc = main([str(source), "--max-rounds", "0"])

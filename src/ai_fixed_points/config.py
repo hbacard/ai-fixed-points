@@ -21,7 +21,7 @@ CONFIG_EXAMPLE_FILE = PROJECT_ROOT / "config.yaml.example"
 ENV_FILE = PROJECT_ROOT / ".env"
 PROMPTS_DIR = PROJECT_ROOT / "prompts"
 
-_PROFILE_ENV = "PSEUDO_SECTIONS_PROFILE"
+_PROFILE_ENV = "DEFAULT_PROFILE"
 
 
 def _resolve_config_file() -> Path:
@@ -137,7 +137,7 @@ def load_config(profile: str | None = None) -> Config:
 
     Profile resolution order:
       1. explicit ``profile`` argument
-      2. ``PSEUDO_SECTIONS_PROFILE`` environment variable
+      2. ``DEFAULT_PROFILE`` environment variable
       3. ``default_profile`` key in the config file
     """
     load_dotenv(ENV_FILE)
