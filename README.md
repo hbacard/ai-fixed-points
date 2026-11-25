@@ -107,6 +107,25 @@ docker run --rm ai-fixed-points
 docker run --rm -v "$PWD/src:/work" ai-fixed-points /work/ai_fixed_points/base.py
 ```
 
+For easier usage with files outside the `src/` directory, you can use the provided wrapper script:
+
+```bash
+# Make the wrapper executable
+chmod +x docker-wrapper.sh
+
+# Run with the wrapper script
+./docker-wrapper.sh /path/to/your/file.py
+```
+
+Or run directly with Docker:
+```bash
+# For files in other directories
+docker run --rm -v "/absolute/path/to/your/file.py:/work/input.py" ai-fixed-points /work/input.py
+
+# Example with current directory file
+docker run --rm -v "$(pwd)/my_file.py:/work/input.py" ai-fixed-points /work/input.py
+```
+
 Secrets are passed through the environment (`-e OPENAI_API_KEY=...`); local
 `config.yaml`/`.env` are **not** baked into the image.
 
